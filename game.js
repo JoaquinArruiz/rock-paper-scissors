@@ -13,5 +13,5 @@ let getComputerChoice = () => { // takes the randomInt function and returns rand
     return ComputerChoice;
 }
 
-playerOption = prompt("Input your option")
+// playerOption = prompt("Input your option")
 

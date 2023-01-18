@@ -1,0 +1,137 @@
+/* 
+
+    colors code:
+        #5E66F2 blue        
+        #04BF68 green
+        #F2BC57 yellow
+        #F2522E orange
+        #0D0D0D Black
+    
+    boxes colors:
+        #F00F00 red
+        #D9370B pseudo orange
+        #F8610C orange
+
+
+    */
+
+
+html {
+    background-color: #5E66F2;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerBox {
+    background-color: #F00F00;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+}
+
+.headerBox h1{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 5em;
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
+    color: #F2BC57;
+    text-shadow: #0D0D0D 0em 0.1em 0em;
+    padding-top: 0em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+/* rock paper scissors buttons */
+
+.optionsBox {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    background-color: #D9370B;
+    margin: 0em;
+}
+
+.rpsButton {
+    margin: 1em;
+	background-color:#F2BC57 ;
+    
+    border:0.1em solid #0D0D0D ;
+	border-radius:10em;
+
+    width: 4em;
+    height: 4em;
+
+    align-items: center;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:3em;
+	text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
+}
+
+.rpsButton:hover {
+	background-color:#04BF68;
+}
+
+.rpsButton:active {
+	position:relative;
+	top:0.1em;
+}
+
+
+.scoreBox{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #2f1d58;
+    overflow: auto;
+    flex-direction: row;
+}
+
+.marker {
+    background-color: #0D0D0D;
+    color: #04BF68;
+    font-size: 5em;
+    width: 20%;
+    height: auto;
+    border: 0.1em solid white;
+    text-align: center;
+}
+
+/* result */
+
+.result {
+    margin-top: 0em;
+    width: 100%;
+    background-color: #0D0D0D;
+}
+
+.result p {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    color: #ffffff;
+}
+
+
+
+/* credits */
+
+footer {
+    margin-top: auto;
+    margin-bottom: 0em;
+}
+
+.credits {
+    font-size: 1em;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #0D0D0D;
+    margin-bottom: 0;
+}
