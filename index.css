@@ -1,251 +1,160 @@
-/* 
-
-    colors code:
-        #5E66F2 blue        
-        #04BF68 green
-        #F2BC57 yellow
-        #F2522E orange
-        #0D0D0D Black
-    
-    boxes colors:
-        #F00F00 red
-        #D9370B pseudo orange
-        #F8610C orange
-
-
-    */
-
-
-html {
-    background-color: #5E66F2;
-}
-
+/* General style */
 body {
+    background-color: #000000;
+    font-family: 'Press Start 2P', cursive;
+    color: #00ff00;
+    text-shadow: 1px 1px #000000;
+  }
+  
+  /* Header styles */
+  .headerBox {
+    background-color: #ff0000;
+    padding: 1em;
+    text-align: center;
+  }
+  
+  .headerBox h1 {
+    font-family: 'VT323', sans-serif;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+  
+  /* Result styles */
+  .roundResult {
+    font-family: 'VT323', sans-serif;
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-top: 1em;
+  }
+  
+  /* Score styles */
+  .scoreBox {
+    font-family: 'VT323', sans-serif;
     display: flex;
-    flex-direction: column;
-}
-
-.headerBox {
     justify-content: center;
     align-items: center;
-    text-align: center;  
-    background-color: #F2522E;
+    flex-wrap:wrap;
+    margin-top: 1em;
 }
-
-.headerBox h1{
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 4em;
-    letter-spacing: 0.1em;
-    word-spacing: 0.2em;
-    color: #F2BC57;
-    text-shadow: #0D0D0D 0em 0.1em 0em;
-    padding-top: 0em;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-    text-align: center;
-}
-
-.roundResult {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+  
+  .computer, .player {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+  }
+  
+  .computerLastchoice, .playerLastchoice {
     font-size: 2em;
-    letter-spacing: 0.1em;
-    word-spacing: 0.2em;
-    color: #F2BC57;
-    text-shadow: #0D0D0D 0em 0.1em 0em;
-    padding-top: 0em;
-    margin-top: 0em;
-    margin-bottom: 0em;
-    text-align: center;
-}
-
-/* rock paper scissors buttons */
-
-.optionsBox {
+    margin-right: 0.5em;
+  }
+  
+  /* RPS button styles */
+  .optionsBox {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
-    margin: 0em;
-    bottom: 0;
-    position: sticky;
-    background-color: #F2522E;
-}
-
-.rockButton {
-    margin: 1em;
-	background-color:#F2BC57 ;
-    
-    border:0.1em solid #0D0D0D ;
-	border-radius:10em;
-
-    width: 4em;
-    height: 4em;
-
     align-items: center;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:2em;
-	text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
-}
-
-.paperButton {
-    margin: 1em;
-	background-color:#F2BC57 ;
+    margin-top: 1.5em;
+    }
     
-    border:0.1em solid #0D0D0D ;
-	border-radius:10em;
-
-    width: 4em;
-    height: 4em;
-
-    align-items: center;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:2em;
-	text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
-}
-
-.scissorsButton {
-    margin: 1em;
-	background-color:#F2BC57 ;
+    .rockButton, .paperButton, .scissorsButton {
+    width: 8em;
+    height: 8em;
+    background-color: #333;
+    border-radius: 50%;
+    border: 2px solid #04BF68;
+    margin: 0 1em;
+    box-shadow: 2px 2px 2px #000;
+    transition: all 0.2s ease-in-out;
+    }
     
-    border:0.1em solid #0D0D0D ;
-	border-radius:10em;
-
-    width: 4em;
-    height: 4em;
-
-    align-items: center;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:2em;
-	text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
-}
-
-
-
-.rockButton:hover {
-	background-color:#04BF68;
-}
-.paperButton:hover {
-	background-color:#04BF68;
-}
-.scissorsButton:hover {
-	background-color:#04BF68;
-}
-
-.rockButton:active {
-	position:relative;
-	top:0.1em;
-}
-.paperButton:active {
-	position:relative;
-	top:0.1em;
-}
-.scissorsButton:active {
-	position:relative;
-	top:0.1em;
-}
-
-/* Score */
-
-.scoreBox{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    overflow: auto;
-    flex-direction: row;
-    padding: 1.7em;
-    border-style: hidden;
-}
-
-.pmarker {
-
-    color: #04BF68;
-    font-size: 4em;
-    width: 20%;
-    height: auto;
-
-    text-align: center;
-    min-width: 5%;
-    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
+    .rockButton:active, .paperButton:active, .scissorsButton:active {
+    transform: scale(0.95);
+    box-shadow: none;
+    }
     
-}
-.cmarker {
-
+    .rpsOption {
+    font-size: 3em;
     color: #04BF68;
-    font-size: 4em;
-    width: 20%;
-    height: auto;
-
+    text-shadow: 2px 2px 2px #000;
     text-align: center;
-    min-width: 5%;
-    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
-}
-
-.playerLastchoice {
-
-    color: #04BF68;
-    font-size: 4em;
-    width: 10%;
-    height: auto;
-
-    text-align: center;
-    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
-}
-
-.computerLastchoice {
-
-    color: #04BF68;
-    font-size: 4em;
-    width: 10%;
-    height: auto;
-
-    text-align: center;
-    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
-}
-
-.computer {
-    color: #04BF68;
-    font-size: 4em;
-    width: 20%;
-    height: auto;
-
-    text-align: left;
-    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
-}
-
-.player {
-
-    color: #04BF68;
-    font-size: 4em;
-    width: 20%;
-    height: auto;
-
-    text-align: left;
-    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
-}
-
-
-
-
-
-/* credits */
-
-footer {
-    margin-top: auto;
-    margin-bottom: 0em;
-}
-
-.credits {
+    margin-top: 0.5em;
+    }
+    
+    footer {   
+    margin-top: 1.5em;
     font-size: 1em;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #0D0D0D;
-    margin-bottom: 0;
-}
+    font-family: 'VT323', sans-serif;
+    color: #04BF68;
+    }
+    
+    a {
+    color: #04BF68;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    }
+    
+    a:hover {
+    color: #fff;
+    text-shadow: 2px 2px 2px #04BF68;
+    }
+    
+    /* Media Queries */
+    
+@media only screen and (max-width: 720px) {
+    .scoreBox {
+    flex-wrap: wrap;
+    }
+    
+    .pmarker, .cmarker {
+        font-size: 2em;
+        width: 10%;
+    }
+    
+    .playerLastchoice, .computerLastchoice {
+        font-size: 2em;
+        width: 5%;
+    }
+    
+    .computer, .player {
+        font-size: 2em;
+        width: 10%;
+    }
+    
+    .optionsBox {
+        flex-wrap: wrap;
+    }
+    
+    .rockButton, .paperButton, .scissorsButton {
+        width: 6em;
+        height: 6em;
+    }
+    
+    .rpsOption {
+        font-size: 2em;
+    }
+    }
+
+    
+@media (min-width: 720px) {
+    .computer, .player {
+        font-size: 3em;
+    }
+    .computerLastchoice, .playerLastchoice {
+        font-size: 2.5em;
+    }
+    .computer, .player, .computerLastchoice, .playerLastchoice {
+        margin-right: 1em;
+    }
+    .pmarker, .cmarker {
+        font-size: 2.5em;
+        width: 10%;
+    }
+    }
+
+        
+        
+        
+        
+        
