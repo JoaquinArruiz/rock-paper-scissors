@@ -26,15 +26,28 @@ body {
 }
 
 .headerBox {
-    background-color: #F00F00;
     justify-content: center;
     align-items: center;
     text-align: center;  
+    background-color: #F2522E;
 }
 
 .headerBox h1{
     font-family: "Comic Sans MS", cursive, sans-serif;
-    font-size: 5em;
+    font-size: 4em;
+    letter-spacing: 0.1em;
+    word-spacing: 0.2em;
+    color: #F2BC57;
+    text-shadow: #0D0D0D 0em 0.1em 0em;
+    padding-top: 0em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+
+.roundResult {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 2em;
     letter-spacing: 0.1em;
     word-spacing: 0.2em;
     color: #F2BC57;
@@ -42,6 +55,7 @@ body {
     padding-top: 0em;
     margin-top: 0em;
     margin-bottom: 0em;
+    text-align: center;
 }
 
 /* rock paper scissors buttons */
@@ -51,11 +65,13 @@ body {
     justify-content: center;
     align-items: flex-start;
     align-content: flex-start;
-    background-color: #D9370B;
     margin: 0em;
+    bottom: 0;
+    position: sticky;
+    background-color: #F2522E;
 }
 
-.rpsButton {
+.rockButton {
     margin: 1em;
 	background-color:#F2BC57 ;
     
@@ -69,19 +85,72 @@ body {
 	display:inline-block;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:3em;
+	font-size:2em;
 	text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
 }
 
-.rpsButton:hover {
+.paperButton {
+    margin: 1em;
+	background-color:#F2BC57 ;
+    
+    border:0.1em solid #0D0D0D ;
+	border-radius:10em;
+
+    width: 4em;
+    height: 4em;
+
+    align-items: center;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:2em;
+	text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
+}
+
+.scissorsButton {
+    margin: 1em;
+	background-color:#F2BC57 ;
+    
+    border:0.1em solid #0D0D0D ;
+	border-radius:10em;
+
+    width: 4em;
+    height: 4em;
+
+    align-items: center;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:2em;
+	text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
+}
+
+
+
+.rockButton:hover {
+	background-color:#04BF68;
+}
+.paperButton:hover {
+	background-color:#04BF68;
+}
+.scissorsButton:hover {
 	background-color:#04BF68;
 }
 
-.rpsButton:active {
+.rockButton:active {
+	position:relative;
+	top:0.1em;
+}
+.paperButton:active {
+	position:relative;
+	top:0.1em;
+}
+.scissorsButton:active {
 	position:relative;
 	top:0.1em;
 }
 
+/* Score */
 
 .scoreBox{
     display: flex;
@@ -89,35 +158,80 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: #2f1d58;
     overflow: auto;
     flex-direction: row;
+    padding: 1.7em;
+    border-style: hidden;
 }
 
-.marker {
-    background-color: #0D0D0D;
+.pmarker {
+
     color: #04BF68;
-    font-size: 5em;
+    font-size: 4em;
     width: 20%;
     height: auto;
-    border: 0.1em solid white;
+
     text-align: center;
+    min-width: 5%;
+    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
+    
 }
+.cmarker {
 
-/* result */
+    color: #04BF68;
+    font-size: 4em;
+    width: 20%;
+    height: auto;
 
-.result {
-    margin-top: 0em;
-    width: 100%;
-    background-color: #0D0D0D;
-}
-
-.result p {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    font-size: 3em;
-    color: #ffffff;
+    min-width: 5%;
+    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
 }
+
+.playerLastchoice {
+
+    color: #04BF68;
+    font-size: 4em;
+    width: 10%;
+    height: auto;
+
+    text-align: center;
+    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
+}
+
+.computerLastchoice {
+
+    color: #04BF68;
+    font-size: 4em;
+    width: 10%;
+    height: auto;
+
+    text-align: center;
+    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
+}
+
+.computer {
+    color: #04BF68;
+    font-size: 4em;
+    width: 20%;
+    height: auto;
+
+    text-align: left;
+    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
+}
+
+.player {
+
+    color: #04BF68;
+    font-size: 4em;
+    width: 20%;
+    height: auto;
+
+    text-align: left;
+    text-shadow: #0D0D0D 0.05em 0.09em 0.1em;
+}
+
+
 
 
 
