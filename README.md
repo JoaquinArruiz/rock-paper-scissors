@@ -4,7 +4,7 @@
 
 Rock Paper and Scissors game to show new javascript, html and css knowledge 
 
-You can play the live test: [Rock-Paper-Scissors Live Page](https://joaquinarruiz.github.io/rock-paper-scissors/)
+You can play the live test at: [Rock-Paper-Scissors Live Page](https://joaquinarruiz.github.io/rock-paper-scissors/)
 
 -----
 #### Process and Some Thoughts:
